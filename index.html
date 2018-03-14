@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image to Bootstrap</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/boostrap4.0.0.css" >
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script>
+
+    
+    
+</head>
+<body>
+ 
+ <style>
+    
+     .area{
+     height: 300px;
+     width: 500px;
+         border: 2px solid red;
+         background: green;
+         margin: 0 auto;
+         
+     }
+    
+     .border-css{
+         border-radius: 10px;
+         border: 2px solid green;
+         background: red;
+         
+     }
+    </style>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center">
+     <h1>CLICK ME</h1>
+     <h2>Header one</h2>
+     <h3>Header two</h3>
+     <h4>Header Four</h4>
+     <h5>Header five</h5>
+     <h6>Header six</h6>
+     <br/>
+     <br/>
+     <p>Hellow World</p>
+     <p>Hellow World</p>
+     <p>Hellow India</p>
+     <p>Hellow World</p>
+     <p>Hellow World</p>
+     
+    <button id="btn-show">SHOW</button>
+    <button id="btn-hide">HIDE</button>
+    <button id="btn-slideup">SLIDE UP</button>
+    <button id="btn-slidedown">SLIDE DOWN</button>
+    <button id="btn-stop">STOP</button>
+    <button id="add-class">ADD CLASS</button>
+    <button id="remove-header">REMOVE Header</button>
+    <button id="style-bg">INDIA FINDER</button>
+    <button id="btn-toggle">TOGGLE</button>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <div class="area "></div>
+     <br/>
+     <br/>
+    
+    <div class="form">
+        <form action="">
+            <input type="text" name="user"> 
+            <input type="password" name="pass">
+        </form>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    
+     <br><br>
+    
+  <script>  
+  $(document).ready(function(){
+    $("h1").click(function(){
+        alert("Hello India")
+    });
+     
+     
+      $("#btn-show").click(function(){
+        $(".area").fadeIn(3000);    
+      });
+         $("#btn-hide").click(function(){
+      $(".area").fadeOut(5000); 
+          });    
+         $("#add-class").click(function(){
+      $(".area").addClass("border-css");        
+             
+    });
+      
+       $("#remove-class").click(function(){
+      $(".area").removeClass("border-css");        
+             
+    });
+      
+      $("#remove-header").click(function(){
+          $(":header:not(:header:eq(3))").fadeOut(5000);
+      });
+      $("#style-bg").click(function(){
+          $("p:contains('India')").css({
+              color:'red',
+              fontWeight:'Bold',
+          })
+      })
+      $("input[name=user]").focusin(function(){
+          $(this).css({
+              background:'green',
+              color:'white',
+          })
+      })
+      
+      
+      $("input[name=user]").focusout(function(){
+          $(this).css({
+              background:'none',
+              color:'black',
+          })
+      })
+      
+      $("#btn-toggle").click(function(){
+          
+          $(".area").toggle(4000)
+      })
+      
+      $("#btn-slideup").click(function(){
+          
+          $(".area").slideUp(3000)
+      });
+      
+       $("#btn-slidedown").click(function(){
+          
+          $(".area").slideDown(3000)
+      });
+      $("#btn-stop").click(function(){
+          $(".area").stop()
+      })
+   });
+    
+    </script>
+    <!-- Include jQuery -->
+    
+    <script src="js/boostrap4.0.0.min.js" ></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
